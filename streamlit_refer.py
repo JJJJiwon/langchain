@@ -9,7 +9,7 @@ from langchain.chat_models import ChatOpenAI
 from langchain.document_loaders import PyPDFLoader
 from langchain.document_loaders import Docx2txtLoader
 from langchain.document_loaders import UnstructuredPowerPointLoader
-from langchain.document_loaders import AirbyteJSONLoader
+from langchain.document_loaders import JSONLoader
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter  # text를 나눌때 사용
 from langchain.embeddings import HuggingFaceEmbeddings  # 한국어에 특화된 허깅페이스에 임베딩 모델 사용
@@ -128,7 +128,7 @@ def get_text(docs):
             loader = UnstructuredPowerPointLoader(file_name)
             documents = loader.load_and_split()
         elif '.jsonl' in doc.name:
-            loader = AirbyteJSONLoader(file_name)
+            loader = JSONLoader(file_name)
             documents = loader.load_and_split()
 
         doc_list.extend(documents)
