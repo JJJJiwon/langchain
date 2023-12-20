@@ -27,7 +27,7 @@ def main():
     page_title="jiwon",
     page_icon=":books:")  # 아이콘은 변경 가능
 
-    st.title("똑똑이 :red[QA Chat]_ :books:")  # _ : 기울임
+    st.title("ttogttogi ChatBot :red[QA Chat]_ :books:")  # _ : 기울임
     
     # 이후 파이썬 스크립트에서 "session_state.conversation"이라는 변수를 쓰기위해 먼저 정의해줌
     if "conversation" not in st.session_state:
